@@ -5,6 +5,8 @@ import MealsByName from "../views/MealsByName.vue";
 import MealsByLetter from "../views/MealsByLetter.vue";
 import MealsByIngredients from "../views/MealsByIngredients.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
+import Detailmeal from "../views/Detailmeal.vue";
+import Ingredients from "../views/Ingredients.vue";
 
 const routes = [
   {
@@ -17,14 +19,14 @@ const routes = [
         component: Home,
       },
       {
-        path: "/letter/:letter",
-        name: "byLetter",
-        component: MealList,
-      },
-      {
         path: "/by-name/:name?",
         name: "byName",
         component: MealsByName,
+      },
+      {
+        path: "/letter/:letter",
+        name: "byLetter",
+        component: MealList,
       },
       {
         path: "/by-letter/:letter?",
@@ -32,11 +34,21 @@ const routes = [
         component: MealsByLetter,
       },
       {
-        path: "/by-igridients/:ingridient?",
+        path: "/ingredients",
+        name: "ingredients",
+        component: Ingredients,
+      },
+      {
+        path: "/by-igridients/:ingredient",
         name: "byIngredients",
         component: MealsByIngredients,
       },
-    ]
+      {
+        path: "/meal/:id?",
+        name: "mealDetail",
+        component: Detailmeal,
+      },
+    ],
   },
 ];
 

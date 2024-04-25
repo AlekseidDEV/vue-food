@@ -1,6 +1,6 @@
 <template>
     <div>
-        <NavBar/>
+        <NavBar />
         <main>
             <router-view />
         </main>
@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-    import NavBar from './NavBar.vue';
+import NavBar from './NavBar.vue';
 </script>
